@@ -7,12 +7,15 @@
 #print(learning_28_Asistance_for_28.roll_dice(6)) #如果没有前面原始python文件名.xxx，import一行会是灰色
 
 #第二种书写方式：
-from learning_28_Asistance_for_28 import roll_dice
-print(roll_dice(6))
+from learning_28_Asistance_for_28 import roll_dice as roll #可以给inport的函数改个简单的名字
+print(roll(6))
 
+import math
+help(math.acos)
 
 #在External Library的python3.9里面，有许多已经下载好的module，其他可以在Terminal里面利用Pip install xxx来直接下载，会下载到site-package中
 
+#注意，import必须在当前路径下存在某文件才能被import
 
 
 

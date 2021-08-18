@@ -175,5 +175,8 @@ help(square_1)
 
 help(None)
 
-
+s = "今天的气温是 30 摄氏度，明天是 29 摄氏度"
+print(s.count("度"))
+print(s.startswith("今"))
+print(s.split("，"))
 
