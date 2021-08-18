@@ -58,3 +58,12 @@ for i in li: # 可以使用 for 依次取出
     print(f"出门之前，别忘了带{i}")
 
 print("女朋友" in li)
+
+dic = {
+    "物理": 42,
+    "工物": 34,
+}
+dic_it = dic.items()
+print(dic_it)
+for k,v in dic.items():
+    print(f"{k}有{v}选课")
