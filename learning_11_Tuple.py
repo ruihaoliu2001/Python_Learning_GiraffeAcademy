@@ -21,3 +21,15 @@ print(tuple) #打印出了数字int 0
 
 tuple_1 = (0,)
 print(tuple_1) #打印出了数字(0,)，是一个tuple
+
+
+
+# namedtuple
+from collections import namedtuple
+
+Point = namedtuple("point", field_names=("x", "y"))
+p = Point(1,2)
+print(p)
+
+print(p.x, p.y)
+print(p[0], p[1])
