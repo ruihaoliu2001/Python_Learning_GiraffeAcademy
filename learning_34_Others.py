@@ -59,11 +59,11 @@ for i in li: # 可以使用 for 依次取出
 
 print("女朋友" in li)
 
-dic = {
+stu = {
     "物理": 42,
     "工物": 34,
 }
-dic_it = dic.items()
-print(dic_it)
-for k,v in dic.items():
+stu_it = stu.items()
+print(stu_it)
+for k,v in stu.items():
     print(f"{k}有{v}选课")
