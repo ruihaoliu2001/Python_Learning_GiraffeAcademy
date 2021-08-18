@@ -39,6 +39,9 @@ print(month_convert.values())
 print(month_convert.items())
 #以上前方都会有dict_xxx()输出
 
+for k in month_convert:
+    print(k)
+# 默认取key输出
 
 
 
@@ -61,9 +64,15 @@ stu = {
     "数学": 3,
 }
 stu_it = stu.items()
+# stu.items()[0] = ("a", 3)是不正确的，TypeError: 'dict_items' object does not support item assignment
+# stu["物理"] = 42  赋值是正确的
 print(stu_it) #默认输出前方带有dict_items()
 for k,v in stu.items():
     print(f"{k}有{v}选课")
+
+stu["致理"] = 5
+print(stu)
+# 可以对dictionary再次赋值
 
 print("数" in stu) #False
 print("数学" in stu) #True
@@ -77,14 +86,14 @@ dsc["工物"] = 42
 dsc["物理"] = 52
 dsc["数学"] = 3
 dsc[123] = 4
-print(dsc["yingyu"])
+print(dsc["yingyu"]) #输出0，若不这样原字典中没有yingyu，程序会报错
 print(dsc["数学"])
 print(dsc[123])
 
 
 # Counter
 deps = ["物理","物理","工物","工物","物理"]
-numbers = defaultdict(int)
+numbers = defaultdict(int) # 这一句命令就体现了defaultdict的作用，否则还得初始化
 
 for d in deps:
     numbers[d]+=1
@@ -93,8 +102,23 @@ print(numbers)
 
 from collections import Counter
 
-cnumbers = Counter(deps)
+cnumbers = Counter(deps) #生成一个新dictionary
 print(cnumbers)
 print(cnumbers["物理"])
 
+
+# 可以简化条件语句，用于多重判断：
+OS = "macOS"
+
+package_manager = {
+    "GNU/Linux": "请用 apt",
+    "macOS": "请用 brew",
+    "Windows": "请安装WSL，而后用 apt"
+}
+
+print("大佬，", end="")
+if OS in package_manager:
+    print(package_manager[OS])
+else:
+    print("请您到讲台上来")
 
